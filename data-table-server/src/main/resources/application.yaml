@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/products?useUnicode=true&characterEncoding=UTF-8&characterSetResults=utf8mb4&connectionCollation=utf8mb4_general_ci
+    username: username
+    password: password
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        use-new-id-generator-mappings: false
+        dialect: org.hibernate.dialect.MySQLDialect
+        storage_engine: innodb
+
